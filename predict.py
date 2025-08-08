@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 def predict_price(vehicle_data):
     """
@@ -28,17 +29,22 @@ def predict_price(vehicle_data):
 
 # --- Main execution block ---
 if __name__ == '__main__':
-    # Example: Let's predict the price for a new vehicle
+    # Example: Let's predict the price for a new vehicle with all features
     sample_vehicle = {
-        'make': 'Ford',
+        'make': 'Jeep',
+        'model': 'Wagoneer',
+        'trim': 'A-Series II',
         'cylinders': 6,
         'fuel': 'Gasoline',
-        'mileage': 35000,
+        'mileage': 10,
         'transmission': 'Automatic',
         'body': 'SUV',
         'doors': 4,
         'drivetrain': 'Four-wheel Drive',
-        'vehicle_age': 3  # A 3-year-old vehicle
+        'exterior_color': 'White',
+        'interior_color': 'Global Black',
+        'brand': 'Jeep',
+        'vehicle_age': 1  # A 1-year-old vehicle (2025 - 2024)
     }
 
     predicted_price = predict_price(sample_vehicle)
