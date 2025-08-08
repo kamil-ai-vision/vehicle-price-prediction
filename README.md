@@ -1,65 +1,74 @@
-# Vehicle Price Prediction 🚗💨
+# 🚗 Vehicle Price Prediction
 
-This project uses machine learning to predict the price of vehicles based on their specifications. It includes a complete workflow from data cleaning and feature engineering to model training, evaluation, and prediction.
-
----
-
-## Model Performance 📈
-
-The final model is a Random Forest Regressor which was evaluated on a held-out test set.
-
-* **R-squared ($R^2$)**: **0.814**
-    * This means the model can explain about 81.4% of the variance in vehicle prices, indicating a strong fit.
-* **Mean Absolute Error (MAE)**: **~$5,678**
-    * On average, the model's price prediction is off by approximately $5,678.
+A machine learning project that predicts vehicle prices based on specifications using a powerful **XGBoost** regressor.
 
 ---
 
-## Project Structure
+## 🌟 Features
 
-```
-├── data/
-│   └── dataset.csv         # The raw dataset
-├── models/
-│   └── (This folder is created by train.py to store the model)
-├── .gitignore              # Specifies files for Git to ignore
-├── predict.py              # Loads the model to predict the price of a sample vehicle
-├── README.md               # This file
-├── requirements.txt        # Required Python libraries
-└── train.py                # Script to train, evaluate, and save the model
-```
+- ✅ **High R-squared:** Achieves a strong R² score of **0.915** on the validation set.
+- 🧠 **Robust Model:** Utilizes **XGBoost**, a state-of-the-art gradient boosting algorithm.
+- 🛠️ **Complete Workflow:** Scripts for training (`train.py`) and prediction (`predict.py`).
+- 📈 **Detailed Evaluation:** Model performance measured using:
+  - **R² Score**
+  - **Mean Absolute Error (MAE)**
+  - **Root Mean Squared Error (RMSE)**
 
----
+ ---
 
-## How to Run This Project
+ ## 🛠️ Setup and Installation
 
-Follow these steps to run the project locally.
-
-### 1. Setup
-
-First, clone the repository and install the necessary dependencies.
-
+### 1️⃣ Clone the Repository
 ```bash
-# Clone the repository
-git clone <your-repository-url>
-
-# Navigate into the project directory
+git clone <your-repo-url>
 cd vehicle-price-prediction
+```
 
-# Install the required libraries
+### 2️⃣ Download Dataset
+- Dataset: [Download Here](https://drive.google.com/file/d/1DCcHXU6uhXkYds9qlr5qXBbWYreGwq_L/view?usp=sharing)  
+- Unzip and place the dataset in the `data/` folder in the project root.
+
+### 3️⃣ Set Up Virtual Environment
+```
+# Create virtual environment
+python -m venv .venv
+
+# Activate (Windows)
+.\.venv\Scripts\activate
+
+# Activate (macOS/Linux)
+source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Train the Model
+---
 
-Run the train.py script. This will process the data, train the model, print its evaluation scores, and save the trained model pipeline to the models/ directory.
-```
+## 🚀 How to Use
+
+### 1️⃣ Train the Model
+To train the model and save the final pipeline:  
+```bash
 python train.py
 ```
 
-### 3. Make a Prediction
+### 2️⃣ Predict a Vehicle's Price
+To predict the price of a new vehicle:
+1. Open predict.py and modify the sample_vehicle dictionary with your desired features.
+2. Run the script:
+   ```
+   python predict.py
+   ```
 
-Run the predict.py script to use the saved model to predict the price of a sample vehicle defined within the script.
-```
-python predict.py
-```
+---
+
+## 📊 Performance Metrics
+- **R-squared (R²):** 0.915  
+- **Mean Absolute Error (MAE):** $3,750.05  
+- **Root Mean Squared Error (RMSE):** $6,202.96  
+
+---
+
+## 👤 Author
+Kamil - [https://github.com/kamil-ai-vision](https://github.com/kamil-ai-vision)
