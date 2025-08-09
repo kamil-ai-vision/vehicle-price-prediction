@@ -20,7 +20,7 @@ A machine learning project that predicts vehicle prices based on specifications 
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/kamil-ai-vision/vehicle-price-prediction.git
 cd vehicle-price-prediction
 ```
 
